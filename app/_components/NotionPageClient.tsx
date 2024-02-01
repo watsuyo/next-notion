@@ -26,11 +26,6 @@ const NotionPageClient = async ({ path }: {
         fullPage
         hideHeader
       />
-      {/* <NotionRenderer
-        blockMap={components}
-        // fullPage
-        // hideHeader
-      /> */}
     </div>
   );
 };

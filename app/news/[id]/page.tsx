@@ -1,5 +1,5 @@
 'use client';
-export const runtime = 'edge';
+
 import React from 'react';
 import { usePathname } from 'next/navigation'
 import NotionPageClient from '../../_components/NotionPageClient';
