@@ -8,7 +8,7 @@ const NotionPageClient = async ({ path }: {
 }) => {
   const fetchPage = async () => {
     const response = await fetch(
-      `https://watsuyo-notion-api-worker.classmethodeurope.workers.dev/${path}`
+      `https://watsuyo-notion-api-worker.classmethodeurope.workers.dev/v1/page/${path}`
     );
     return await response.json();
   };
