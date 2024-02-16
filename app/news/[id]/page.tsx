@@ -7,8 +7,10 @@ import NotionPageClient from '../../_components/NotionPageClient';
 
 const NotionPage: React.FC = () => {
   const path = usePathname();
-  return <NotionPageClient path={
-    path.replace(/^\/news\//, '')
+  const id = path.replace(/^\/news\//, '')
+
+  return <NotionPageClient id={
+    id
   } />;
 };
 

@@ -1,14 +1,17 @@
 import Head from "next/head";
-import { NotionRenderer } from "@watsuyo/react-notion";
-import "@watsuyo/react-notion/src/styles.css";
-import "prismjs/themes/prism-tomorrow.css";
 
-const NotionPageClient = async ({ path }: {
-  path: string;
+import "prismjs/themes/prism-tomorrow.css";
+// import { NotionRenderer } from "@watusyo/react-notion";
+// import "react-notion/src/styles.css";
+import { NotionRenderer } from "../../../react-notion-sushi";
+import "../../../react-notion-sushi/src/styles.css";
+
+const NotionPageClient = async ({ id }: {
+  id: string;
 }) => {
   const fetchPage = async () => {
     const response = await fetch(
-      `https://watsuyo-notion-api-worker.classmethodeurope.workers.dev/v1/page/${path}`
+      `https://watsuyo-notion-api-worker.classmethodeurope.workers.dev/v1/page/${id}`
     );
     return await response.json();
   };
