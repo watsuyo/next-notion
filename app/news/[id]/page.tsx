@@ -1,17 +1,24 @@
-'use client'
-export const runtime = 'edge'
+"use client";
+export const runtime = "edge";
 
-import React from 'react';
-import { usePathname } from 'next/navigation'
-import NotionPageClient from '../../_components/NotionPageClient';
+import React from "react";
+import { usePathname } from "next/navigation";
+import NotionPageClient from "../../_components/NotionPageClient";
 
-const NotionPage: React.FC = () => {
+const NotionPage = () => {
   const path = usePathname();
-  const id = path.replace(/^\/news\//, '')
+  const id = path.replace(/^\/news\//, "");
 
-  return <NotionPageClient id={
-    id
-  } />;
+  return (
+    <div
+      className="
+        mx-auto
+        max-w-4xl
+      "
+    >
+      <NotionPageClient id={id} />;
+    </div>
+  );
 };
 
 export default NotionPage;
